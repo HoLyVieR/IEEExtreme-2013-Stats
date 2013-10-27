@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Statistic of IEEExtreme 2013</title>
+		
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="main" style="display: none;">
+				<div class="span8 offset2">
+					<h1>Statistic of IEEExtreme 2012</h1>
+					
+					<div class="alert"><b>Note 1 :</b> Team with 0 submission are not included.</div>
+					<div class="alert"><b>Note 2 :</b> This is not official. The data comes from a crawler I made.</div>
+					
+					<!-- Basic statistic section -->
+					<h2>Basic statistic</h2>
+					<label for="basic-stats-ddl">Country</label>
+					<select id="basic-stats-ddl" class="country-ddl">
+						<option value="">All</option>
+					</select>
+					
+					<div class="well">
+						Average number of point : <span id="basic-score-average"></span> pts.<br />
+						Mean number of point : <span id="basic-score-mean"></span> pts.<br />
+					</div>
+					
+					<!-- Distribution of score -->
+					<h2>Score distribution</h2>
+
+					<label for="country-distribution-ddl">Country</label>
+					<select id="country-distribution-ddl" class="country-ddl">
+						<option value="">All</option>
+					</select>
+					<br />
+					
+					<div id="score-distribution-graph"></div>
+					
+					<h2>Country comparaison</h2>
+					
+					<div class="alert"><b>Note :</b> We only consider country with more than 10 teams.</div>
+					
+					<div class="tabbable tabs-top">
+		              <ul class="nav nav-tabs">
+		                <li class="active"><a href="#average-pts" data-toggle="tab">Average points per team</a></li>
+		              </ul>
+		              <div class="tab-content">
+		                <div class="tab-pane active" id="average-pts">
+							<div id="average-pts-graph"></div>
+						</div>
+		                <div class="tab-pane" id="average-pts-sub">
+							<div id="average-pts-sub-graph"></div>
+						</div>
+		              </div>
+		            </div>
+					
+				</div>
+			</div>
+
+			<br />
+			<br />
+			<br />
+			
+			<div class="row" id="loading">
+				<div class="span8 offset2">
+					<h1>Loading data. Please wait few seconds ...</h1>
+				</div>
+			</div>
+		</div>	
+		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="highcharts/highcharts.js" type="text/javascript"></script>
+		<script src="stats.js"></script>
+		<script src="data.js"></script>
+		<script src="basic-stats.js"></script>
+		<script src="score-distribution.js"></script>
+		<script src="country-ddl.js"></script>
+		<script src="filter.js"></script>
+		<script src="top-country-pts.js"></script>
+		<script src="top-country-pts-sub.js"></script>
+		<script src="es5-shim.min.js"></script>
+	</body>
+</html>
